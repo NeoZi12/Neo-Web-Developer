@@ -1,0 +1,6 @@
+/* CSS Modules smoke test — Vite supports this natively.
+   This file confirms that *.module.css imports are scoped correctly.
+   Safe to delete once the first real component is built. */
+.root {
+  display: contents; /* renders nothing visually */
+}
