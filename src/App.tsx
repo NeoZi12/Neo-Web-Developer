@@ -2,6 +2,8 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { AuroraBackground } from "./components/AuroraBackground/AuroraBackground";
 import { Hero } from "./sections/Hero/Hero";
 import { About } from "./sections/About/About";
+import { Services } from "./sections/Services/Services";
+import { Projects } from "./sections/Projects/Projects";
 import profileImage from "./assets/profile.png";
 import aboutImage from "./assets/esmeralda.jpeg";
 
@@ -11,6 +13,8 @@ function App() {
       <Navbar />
       <Hero profileImage={profileImage} />
       <About aboutImage={aboutImage} />
+      <Services />
+      <Projects />
     </AuroraBackground>
   );
 }

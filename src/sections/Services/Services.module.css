@@ -1,0 +1,251 @@
+/* ============================================================
+   Services Section
+   ============================================================ */
+
+.section {
+  padding: var(--section-padding-y) var(--section-padding-x);
+  padding-top: 4rem;
+  background: transparent;
+  position: relative;
+  scroll-margin-top: 88px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+
+.header {
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    text-align: left;
+  }
+}
+
+.eyebrow {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.heading {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-4);
+}
+
+.subheading {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  max-width: 38rem;
+  line-height: var(--line-height-loose);
+}
+
+@media (max-width: 767px) {
+  .subheading {
+    margin: 0 auto;
+  }
+}
+
+/* --- Card Stack --- */
+
+.cardStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* --- Card --- */
+
+.card {
+  background: var(--color-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem var(--space-lg);
+  cursor: pointer;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  background: var(--color-surface-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.cardInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.iconWrap {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-md);
+  background: var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.cardTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: var(--line-height-tight);
+}
+
+.cardSubtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+/* --- Info Button --- */
+
+.infoBtn {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition);
+}
+
+.infoBtn:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+/* ============================================================
+   Modal
+   ============================================================ */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: var(--z-overlay);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  z-index: calc(var(--z-overlay) + 1);
+
+  /* Sizing */
+  width: min(90vw, 32rem);
+  height: fit-content;
+  max-height: 85vh;
+  overflow-y: auto;
+
+  /* Glass */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+
+  /* Futuristic border + glow */
+  box-shadow:
+    0 0 0 1px var(--color-border),
+    0 0 30px rgba(22, 163, 74, 0.1),
+    0 20px 60px rgba(15, 23, 42, 0.12);
+
+  padding: var(--space-lg);
+}
+
+.closeBtn {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition);
+}
+
+.closeBtn:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.modalIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-md);
+  background: var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.modalTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-4);
+}
+
+.modalDivider {
+  height: 1px;
+  background: var(--color-border);
+  margin-bottom: var(--space-md);
+  opacity: 0.6;
+}
+
+.modalDetail {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+}
