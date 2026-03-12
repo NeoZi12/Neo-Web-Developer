@@ -7,13 +7,11 @@ import aboutImage from "./assets/esmeralda.jpeg";
 
 function App() {
   return (
-    <>
+    <AuroraBackground showRadialGradient>
       <Navbar />
-      <AuroraBackground showRadialGradient>
-        <Hero profileImage={profileImage} />
-      </AuroraBackground>
+      <Hero profileImage={profileImage} />
       <About aboutImage={aboutImage} />
-    </>
+    </AuroraBackground>
   );
 }
 

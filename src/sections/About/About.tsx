@@ -34,7 +34,7 @@ export function About({ aboutImage }: AboutProps) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className={styles.photoFrame}>
+          <div className={styles.imageFrame}>
             <img
               src={aboutImage ?? "https://placehold.co/480x600?text=Photo"}
               alt="Neo Zino — Freelance Web Developer"

@@ -210,3 +210,15 @@
 .mobileLink:hover {
   color: #ffffff;
 }
+
+/* ============================================================
+   Active section state — desktop + mobile
+   ============================================================ */
+.active {
+  color: var(--color-white);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.active::after {
+  transform: scaleX(1);
+}
